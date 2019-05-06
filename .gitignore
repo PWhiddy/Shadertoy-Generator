@@ -1,0 +1,6 @@
+node_modules
+*.json
+*.glsl
+__pycache__
+test
+key.txt
