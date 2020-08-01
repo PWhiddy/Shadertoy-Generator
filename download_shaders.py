@@ -28,4 +28,4 @@ if __name__ == "__main__":
         with open("allshaders/s" + str(i) + ".json", 'wb') as output:
             output.write(readIndex(i))
             output.close()
-        time.sleep(1.5)
+        time.sleep(0.1)
