@@ -60,7 +60,7 @@ def limited_get(url, wait_time, user, toke):
     resp = requests.get(url, auth=(user,toke))
     if 'application/json' in resp.headers.get('content-type'):
         respj = resp.json()
-        if not isinstance(respj, list) and 'message' in respj.keys() and 'API rate limit exceeded' in respj['message]']:
+        if not isinstance(respj, list) and 'message' in respj.keys() and 'API rate limit exceeded' in respj['message']:
             print(f'Rate limited. waiting for {wait_time} seconds')
             time.sleep(wait_time)
             return limited_get(url, user, toke)
